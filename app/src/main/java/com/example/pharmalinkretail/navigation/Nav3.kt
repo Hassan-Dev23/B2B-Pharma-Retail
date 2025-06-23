@@ -96,7 +96,7 @@ fun Navigation3(
     }
 
 
-    val backStack = rememberSaveable(email) {
+    val backStack = remember(email) {
         if (email.isNotEmpty() && password.isNotEmpty()) {
             mutableStateListOf<Any>(HomeScreen)
         } else {
